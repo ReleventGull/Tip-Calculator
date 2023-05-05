@@ -1,0 +1,163 @@
+#app, body, html {
+    margin: 0;
+    height: 100%;
+}
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+:root {
+--Strong-cyan: hsl(172, 67%, 45%);
+--Very-dark-cyan: hsl(183, 100%, 15%);
+--Dark-grayish-cyan: hsl(186, 14%, 43%);
+--Grayish-cyan: hsl(184, 14%, 56%);
+--Light-grayish-cyan: hsl(185, 41%, 84%);
+--Very-light-grayish-cyan: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+    font-family: boldMono;
+    src: url(./fonts/SpaceMono-Bold.ttf);
+}
+
+
+#app {
+    background-color: var(--Light-grayish-cyan);
+    display: grid;
+    place-items: center;
+    font-family: boldMono;
+}
+
+.mainContainer {
+    background-color: white;
+    width: clamp(25em, 10rem + 60vw , 90rem);
+    padding: 25px;
+    border-radius: 30px;
+    font-family: boldMono;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container {
+    width: 45%;
+    height: 40rem;
+    padding: 20px;
+}
+
+.container.right {
+    background-color: var(--Very-dark-cyan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    color: var(--Dark-grayish-cyan)
+}
+
+.billInput {
+    color: var(--Very-dark-cyan);
+    box-sizing: border-box;
+    font-weight: 650;
+    width: 100%;
+    padding: 15px;
+    padding-left: 25px;
+    border: none;
+    outline: none;
+    text-align: right;
+    font-size: 2rem;
+    background-color: var(--Very-light-grayish-cyan);
+}
+.billInput.price {
+    background-image: url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position: 4px;
+    background-size: .7em;
+}
+
+.billInput.people {
+    background-image: url(./images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position: 4px;
+    background-size: .7em;
+}
+
+.tipOptions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+.customTip input {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    background-color: var(--Very-light-grayish-cyan);
+    border-radius: 10px;
+    color: var(--Dark-grayish-cyan)
+}
+
+.tipOptions div {
+    background-color: var(--Very-dark-cyan);
+    color: white;
+    height: 2.4em;
+    display: grid;
+    place-items: center;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.tipOptions .buttonTip:hover {
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+    transition: .2s;
+}
+
+.total {
+    color: white;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    gap: 30%;
+    width: 85%;
+}
+
+.resetButton {
+    width: 90%;
+    outline: none;
+    border: none;
+    background-color: var(--Strong-cyan);
+    font-size: 1.5rem;
+    height: 5rem;
+    color: hsl(183, 100%, 15%);
+    font-weight: 600;
+    border-radius: 10px;
+    margin-top: 13rem;
+}
+
+.totalLabels {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.totalCostPerson {
+    font-size: 3rem;
+    color: var(--Strong-cyan)
+}
