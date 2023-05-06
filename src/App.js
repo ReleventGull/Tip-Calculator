@@ -2,6 +2,11 @@
 
 const App = () => {
     return (
+        <>
+        <div>
+            <h1 className="splitter">SPLI</h1>
+            <h1 className="splitter">TTER</h1>
+        </div>
         <div className="mainContainer">
             <div className="container left">
                 <div className="billContainer">
@@ -46,6 +51,7 @@ const App = () => {
                 <button className="resetButton">RESET</button>
             </div>      
         </div>
+    </>
     )
 }
 export default App
