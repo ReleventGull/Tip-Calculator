@@ -33,7 +33,9 @@ h1, h2, h3, h4, p {
     letter-spacing: 1rem;
     color: var(--Dark-grayish-cyan);
 }
-
+.billContainer, .numberPeopleContainer {
+    min-height: 8rem;
+}
 .mainContainer {
     background-color: white;
     width: clamp(25em, 10rem + 60vw , 90rem);
@@ -74,18 +76,26 @@ h1, h2, h3, h4, p {
     font-weight: 650;
     width: 100%;
     padding: 15px;
-    padding-left: 25px;
+    padding-left: 40px;
     border: none;
     outline: none;
     text-align: right;
     font-size: 2rem;
     background-color: var(--Very-light-grayish-cyan);
+    border: 3px solid transparent;
+    transition: .2s;
+}
+.billInput:focus {
+    border: 3px solid var(--Strong-cyan);
+    border-radius: 8px;
+    outline: none;
+    transition: .2s;
 }
 .billInput.price {
     background-image: url(./images/icon-dollar.svg);
     background-repeat: no-repeat;
     background-position: left;
-    background-position: 4px;
+    background-position: left 1rem center;
     background-size: .7em;
 }
 
@@ -93,7 +103,7 @@ h1, h2, h3, h4, p {
     background-image: url(./images/icon-person.svg);
     background-repeat: no-repeat;
     background-position: left;
-    background-position: 4px;
+    background-position: left 1rem center;
     background-size: .7em;
 }
 
@@ -116,7 +126,8 @@ h1, h2, h3, h4, p {
     font-weight: 800;
     background-color: var(--Very-light-grayish-cyan);
     border-radius: 10px;
-    color: var(--Dark-grayish-cyan)
+    color: var(--Dark-grayish-cyan);
+    transition: .2s;
 }
 
 .tipOptions div {
@@ -133,8 +144,13 @@ h1, h2, h3, h4, p {
 .tipOptions .buttonTip:hover {
     background-color: var(--Light-grayish-cyan);
     color: var(--Very-dark-cyan);
+    cursor: pointer;
     transition: .2s;
 }
+.customTip input:focus {
+    border: 3px solid var(--Strong-cyan);
+    transition: .2s
+}   
 
 .total {
     color: white;
@@ -157,8 +173,13 @@ h1, h2, h3, h4, p {
     font-weight: 600;
     border-radius: 10px;
     margin-top: 13rem;
+    transition: .2s;
 }
-
+.resetButton:hover {
+    background-color: var(--Light-grayish-cyan);
+    cursor: pointer;
+    transition: .2s;
+}
 .totalLabels {
     display: flex;
     align-items: center;
