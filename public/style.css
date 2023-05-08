@@ -98,6 +98,9 @@ h1, h2, h3, h4, p {
     background-position: left 1rem center;
     background-size: .7em;
 }
+.billInput.price.false {
+    border: 3px solid orange
+}
 
 .billInput.people {
     background-image: url(./images/icon-person.svg);
@@ -106,7 +109,10 @@ h1, h2, h3, h4, p {
     background-position: left 1rem center;
     background-size: .7em;
 }
-
+.billInput.people.false {
+    border: 3px solid orange;
+    border-radius: 10px;
+}
 .tipOptions {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -161,7 +167,28 @@ h1, h2, h3, h4, p {
     gap: 30%;
     width: 85%;
 }
-
+.buttonTip.active {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan)
+}
+.numberOfPeopleBox {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+.peopleErrorMessage {
+    color: orange
+}
 .resetButton {
     width: 90%;
     outline: none;
