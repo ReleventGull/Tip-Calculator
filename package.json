@@ -11,7 +11,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "react-scripts start index"
+    "start": "react-scripts start index",
+    "build": "react-scripts build"
   },
   "author": "",
   "license": "ISC",
