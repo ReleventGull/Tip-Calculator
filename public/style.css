@@ -219,6 +219,15 @@ input[type=number] {
     font-size: 3rem;
     color: var(--Strong-cyan)
 }
+
+button:disabled {
+    opacity: .4;
+
+}
+button:disabled:hover {
+    cursor: not-allowed;
+}
+
 @media only screen and (max-width: 700px) {
     .mainContainer {
         border-radius: 40px;

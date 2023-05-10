@@ -29,8 +29,8 @@ const buttonData = [
  
 
 const App = () => {
-    const [bill, setBill] = useState()
-    const [numberOfPeople, setNumberOfPeople] = useState()
+    const [bill, setBill] = useState('')
+    const [numberOfPeople, setNumberOfPeople] = useState('')
     const [customTip, setCustomTip] = useState('')
     const [activeTip, setActiveTip] = useState()
 
@@ -144,7 +144,18 @@ const App = () => {
                         <h2 className="totalCostPerson">{totalPerson}</h2>
                     </div>
                 </div>
-                <button className="resetButton">RESET</button>
+                <button disabled={(bill || customTip || activeTip || numberOfPeople) ? false : true} className="resetButton" onClick={() => {
+                        setNumberOfPeople('')
+                        setBill('')
+                        setActiveTip('')
+                        setCustomTip('')
+                        setTotalPerson('0.00')
+                        setTipAmountPerson('0.00')
+                        setBillError('')
+                        setBillValid('')
+                        setPeopleError('')
+                        setNumberOfPeopleValid('')
+                }}>RESET</button>
             </div>      
         </div>
     </>
