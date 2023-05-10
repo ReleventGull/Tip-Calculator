@@ -102,6 +102,9 @@ h1, h2, h3, h4, p {
     border: 3px solid orange
 }
 
+.numberOfPeopleBox h2 {
+font-size: 1.5rem;
+}
 .billInput.people {
     background-image: url(./images/icon-person.svg);
     background-repeat: no-repeat;
@@ -250,5 +253,8 @@ input[type=number] {
     }
     .billInput {
         padding: 10px
+    }
+    .numberOfPeopleBox h2 {
+        font-size: 1.2rem;
     }
 }
